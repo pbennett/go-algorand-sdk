@@ -13,6 +13,9 @@ type (
 
 		// The hash of the previous block
 		Branch BlockHash `codec:"prev"`
+		
+		// Patched to work around temporary go-algorand changes
+		Temp interface{} `codec:"cc"`
 
 		// Sortition seed
 		Seed [32]byte `codec:"seed"`
